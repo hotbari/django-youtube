@@ -1,0 +1,21 @@
+# Django
+django>=5.0.3,<6.0.0 # 5.0.1 이상 이거나 6.0.0 미만의 버전을 설치해라
+
+# DRF(Django Rest Framework)
+djangorestframework>=3.14.0,<4.0.0
+
+# Psycopg2
+psycopg2-binary>=2.9.9,<3.0.0
+
+# DRF-Spectacular
+drf-spectacular>=0.27.1,<0.28.0
+
+# Help Django Chatting Socket Connection
+channels>=4.0.0,<4.0.1
+daphne>=4.1.0,<4.2.0
+
+# uWSGI
+# uWSGI>=2.0.24,<2.1.0 # GCC -> C++
+
+
+# docker-compose build
