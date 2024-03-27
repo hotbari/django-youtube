@@ -28,6 +28,7 @@ services:
             python manage.py runserver 0.0.0.0:8000"
     environment: # .env는 커밋X 회사에서는 onepassword 프로그램을 사용해 .env 파일을 직접 만들어야됨
       - DB_HOST=db
+      # postgres env랑 동일하게
       - DB_NAME=youtube
       - DB_USER=hotbari
       - DB_PASS=password123
@@ -38,7 +39,7 @@ services:
   # 두번째 컨테이너 : Postgres
   db:
     image: postgres:16-alpine
-    volumes: # 데이터 저장 공간
+    volumes: # DB는 데이터 저장 공간이 필요해
       - ./data/db:/var/lib/postgresql/data # 로컬 공간 data폴더의 db(호스트 공간)를 : 이하(컨테이너 폴더)로 마운트
     environment: # 접근 권한에 대한 환경 변수
       - POSTGRES_DB=youtube
